@@ -1,5 +1,5 @@
 // Fonts
-$fontSize:        1rem;
+$fontSize:        16px;
 $fontPrimary:     'Lato', 'Helvetica Neue', 'Lucida Grande', Arial, Verdana, sans-serif;
 $fontHeader:      'Dosis', 'Lato', 'Helvetica Neue', 'Lucida Grande', Arial, Verdana, sans-serif;
 $fontLight:       100;
@@ -7,12 +7,13 @@ $fontNormal:      300;
 $fontBold:        400;
 $fontStyle:       normal;
 $letterSpacing:   0;
-$lineHeight:      1.6;
+$lineHeight:      1.47;
 
 // Sizes
-$navSize:         70px;
-$navSizeMobile:   60px;
-$padding:         2rem;
+$navSize:       70px;
+$navSizeMobile: 60px;
+$subHeaderSize:    40px;
+$padding:          15px;
 
 // Bootstrap Grid Breakpoints
 $grid-xs:         0;
@@ -25,16 +26,18 @@ $grid-xl:         1200px;
 // Colors
 $primaryColor:    #0a5c92;
 $secondaryColor:  #5FA0CB;
-$textColor:       #454545;
+
 $headerColor:     #333333;
+$textColor:       #454545;
 $textColorLight:  #8a959e;
+
 $white:           #FFFFFF;
 $bodyColor:       #F9F9F9;
 $bodyColorDark:   #22313F;
 $frameColor:      #F1F2F1;
-$menuColor:       #101011;
 $borderColor:     #DDE3EB;
-$vectorBlue:      #1065D7;
+$navBgColor:      #ffffff;
+$navTextColor:    $textColor;
 
 // Forms Colors
 $greenAlert:      #27AE60;

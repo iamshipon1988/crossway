@@ -4,6 +4,70 @@
 * Author URL: http://sazzad.me
 */
 
-/** Import **/
+/**
+
+Table of Contents
+
+01. Import & Assets
+02. Navigation
+
+**/
+
+/** Import & Assets **/
+
 @import "assets/variables";
 @import "assets/mixins";
+
+/** Navigation **/
+
+header {
+    z-index: 10;
+    position: relative;
+    @extend %clearfix;
+
+    // Nav Style 1
+    &.style-1 {
+        background: $navBgColor;
+        color: $navTextColor;
+        @include box-shadow(0 1px 1px rgba(0,0,0,0.1));
+
+        .sub-header {
+            border-top: 2px solid $primaryColor;
+            border-bottom: 1px solid $borderColor;
+            height: $subHeaderSize;
+            line-height: $subHeaderSize;
+            font-size: .8*$fontSize;
+            font-weight: $fontBold;
+            color: $textColorLight;
+        }
+    }
+
+    nav {
+        height: $navSize;
+        line-height: $navSize;
+    }
+}
+
+/** List Styles **/
+
+.vertical-list {
+    width: auto;
+    padding: 0;
+    margin: 0;
+
+    li {
+        display: inline-block;
+        list-style-type: none;
+        margin-right: $padding;
+
+        a {
+            display: block;
+            text-decoration: none;
+        }
+
+        .icon {
+            display: inline-block;
+            margin-right: .5*$padding;
+        }
+    }
+}
