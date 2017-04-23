@@ -44,7 +44,14 @@ header {
 
     nav {
         height: $navSize;
-        line-height: $navSize;
+
+        ul {
+            li {
+                a {
+
+                }
+            }
+        }
     }
 }
 
