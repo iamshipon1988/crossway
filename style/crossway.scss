@@ -310,6 +310,15 @@ Table of Contents
                             color: $textColorDark;
                         }
                     }
+
+                    .nav-button {
+                        margin-left: $padding-xs;
+                        color: white;
+
+                        &:hover {
+                            color: white;
+                        }
+                    }
                 }
 
                 .dropdown-menu {
