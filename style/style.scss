@@ -92,7 +92,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: $fontNormal;
     color: $textColorDark;
     line-height: 1.27;
-    margin: 1rem 0;
+    margin: 0 0 $padding-lg;
 
     a {
         color: inherit;

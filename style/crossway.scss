@@ -55,6 +55,20 @@ Table of Contents
     padding-left: 0 !important;
 }
 
+// Color Setups
+
+.bg-dark, .bg-blue, .bg-red, .bg-green {
+    color: white;
+
+    h1, h2, h3, h4, h5, h6, a, .lead {
+        color: white;
+    }
+}
+
+.bg-dark {
+    background: $bodyColorDark;
+}
+
 .bg-white {
     background: white;
 }
@@ -63,23 +77,16 @@ Table of Contents
     background: $bodyColor;
 }
 
-.bg-dark {
-    background: $bodyColorDark;
-}
-
 .bg-red {
     background: $redAlert !important;
-    color: white;
 }
 
 .bg-green {
     background: $greenAlert !important;
-    color: white;
 }
 
 .bg-blue {
     background: $blueAlert !important;
-    color: white;
 }
 
 .bg-yellow {
@@ -267,6 +274,7 @@ Table of Contents
 }
 
 .lead {
+    font-size: $fontSizeLarge;
     font-weight: $fontNormal;
     color: $textColorLight;
 }
@@ -367,9 +375,18 @@ Table of Contents
     }
 }
 
+/** Generic Containers **/
+
 section {
-    border-top: 1px solid #ebebeb;
+    border-top: 1px solid $borderColor;
     min-height: 300px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    &.text-center div[class*='col-']:first-child:last-child {
+        margin: 0 auto;
+        float: none;
+    }
 }
 
 /** List Styles **/
@@ -396,6 +413,21 @@ section {
         .icon {
             display: inline-block;
             margin-right: .5*$padding;
+        }
+    }
+}
+
+/** Footer Styles **/
+footer {
+    border-top: 1px solid $borderColor;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    &.style-1 {
+        font-size: $fontSizeSmall;
+
+        ul {
+            text-transform: uppercase;
         }
     }
 }
