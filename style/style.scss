@@ -7,8 +7,6 @@
 /** Import **/
 @import "assets/variables";
 @import "assets/mixins";
-@import 'https://fonts.googleapis.com/css?family=Lato:100,300,400';
-@import url('https://fonts.googleapis.com/css?family=Dosis:200,300,400,500');
 
 
 /** Basic Setup **/
@@ -23,7 +21,7 @@ html {
 }
 
 body {
-    background: $bodyColor;
+    background: $white;
     color: $textColor;
     font-family: $fontPrimary;
     font-style: $fontStyle;
@@ -49,7 +47,6 @@ a {
     cursor: pointer;
     color: $textColor;
     text-decoration: none;
-    font-weight: $fontBold;
 
     &:hover {
         color: $secondaryColor;
@@ -92,7 +89,9 @@ abbr[title] {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: $fontHeader;
-    font-weight: $fontBold;
+    font-weight: $fontNormal;
+    color: $textColorDark;
+    line-height: 1.27;
     margin: 1rem 0;
 
     a {
@@ -155,28 +154,12 @@ figure {
 
 /** Class Helpers **/
 
-.display-none {
-    display: none !important;
-}
-
-.no-margin-bottom {
-    margin-bottom: 0;
-}
-
-.bg-white {
-    background: white;
-}
-
-.bg-dark {
-    background: $bodyColorDark;
-}
-
-.color-light {
-    color: $textColorLight;
-}
-
 .btn {
     border-color: $borderColor;
+}
+
+.img-responsive {
+    max-width: 100%;
 }
 
 /** Forms **/

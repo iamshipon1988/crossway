@@ -1,19 +1,31 @@
 // Fonts
 $fontSize:        16px;
+$fontSizeSmall:   12px;
+$fontSizeLarge:   20px;
+$fontSizeNav:     13px;
 $fontPrimary:     'Lato', 'Helvetica Neue', 'Lucida Grande', Arial, Verdana, sans-serif;
 $fontHeader:      'Dosis', 'Lato', 'Helvetica Neue', 'Lucida Grande', Arial, Verdana, sans-serif;
 $fontLight:       100;
-$fontNormal:      300;
-$fontBold:        400;
+$fontNormal:      400;
+$fontBold:        700;
 $fontStyle:       normal;
 $letterSpacing:   0;
-$lineHeight:      1.47;
+$lineHeight:      1.57;
 
 // Sizes
-$navSize:       70px;
-$navSizeMobile: 60px;
-$subHeaderSize:    40px;
-$padding:          15px;
+$navSize:         70px;
+$navSizeMobile:   60px;
+$subHeaderSize:   40px;
+$padding-xs:      5px;
+$padding-sm:      10px;
+$padding:         15px;
+$padding-lg:      20px;
+$padding-xl:      30px;
+
+$inputSizeLg:     60px;
+$inputSize:       50px;
+$inputSizeSm:     40px;
+$inputSizeXs:     18px;
 
 // Bootstrap Grid Breakpoints
 $grid-xs:         0;
@@ -26,13 +38,14 @@ $grid-xl:         1200px;
 // Colors
 $primaryColor:    #0a5c92;
 $secondaryColor:  #5FA0CB;
+$tirtiaryColor:   #4680FE;
 
-$headerColor:     #333333;
-$textColor:       #454545;
-$textColorLight:  #8a959e;
+$textColor:       #666666;
+$textColorLight:  #808080;
+$textColorDark:   #252525;
 
 $white:           #FFFFFF;
-$bodyColor:       #F9F9F9;
+$bodyColor:       #FAFAFA;
 $bodyColorDark:   #22313F;
 $frameColor:      #F1F2F1;
 $borderColor:     #DDE3EB;
@@ -40,8 +53,11 @@ $navBgColor:      #ffffff;
 $navTextColor:    $textColor;
 
 // Forms Colors
-$greenAlert:      #27AE60;
-$redAlert:        #CF000F;
+$greenAlert:      #00bf86;
+$redAlert:        #DD6777;
+$blueAlert:       #00c0ef;
+$yellowAlert:     #ffeb3b;
+$ltorange:        lighten($secondaryColor, 20%);
 
 // Social Media Brand Colors
 $twitter: #00aced;

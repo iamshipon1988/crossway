@@ -35,8 +35,8 @@
     }
 }
 
-@mixin flexbox-col($value: on) {
-    @if $value == on {
+@mixin flexbox-col($value: center) {
+    @if $value == center {
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
@@ -50,6 +50,23 @@
         -webkit-justify-content: center;
         -ms-flex-pack: center;
         justify-content: center;
+        align-self: center;
+    }
+    @elseif $value == bottom {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -webkit-justify-content: flex-end;
+        -ms-flex-pack: center;
+        justify-content: flex-end;
+        align-self: center;
     }
     @else {
         display: block;
@@ -73,10 +90,21 @@
     transform: translate3d($axex,$axey,$axez);
 }
 
-@mixin box-shadow($params) {
-    -webkit-box-shadow: $params;
-    -moz-box-shadow: $params;
-    box-shadow: $params;
+@mixin box-shadow($shadow1, $shadow2:false, $shadow3:false, $shadow4:false, $shadow5:false) {
+ $params: $shadow1;
+  @if $shadow2
+    { $params: $shadow1, $shadow2; }
+    @if $shadow3 != false
+      { $params: $shadow1, $shadow2, $shadow3; }
+      @if $shadow4 != false
+        { $params: $shadow1, $shadow2, $shadow3, $shadow4; }
+        @if $shadow5 != false
+          { $params: $shadow1, $shadow2, $shadow3, $shadow4, $shadow5; }
+
+  -webkit-box-shadow: $params;
+     -moz-box-shadow: $params;
+          box-shadow: $params;
+
 }
 
 @mixin transition($args...) {
@@ -151,96 +179,51 @@
     transform: translateY(-50%);
 }
 
-// Angle machine
-@function pow($number, $exp) {
-    $value: 1;
-    @if $exp > 0 {
-        @for $i from 1 through $exp {
-            $value: $value * $number;
+// Hamburger
+@mixin hamburger($width, $bar-height, $space, $color) {
+  display: block;
+  width: $width;
+  height: (($bar-height * 3) + ($space * 2));
+  background: linear-gradient(
+            to bottom,
+            $color 0, $color $bar-height,
+            transparent $bar-height, transparent ($bar-height + $space),
+            $color ($bar-height + $space), $color (($bar-height * 2) + $space),
+            transparent (($bar-height * 2) + $space),transparent (($bar-height * 2) + ($space * 2)),
+            $color (($bar-height * 2) + ($space * 2)), $color (($bar-height * 3) + ($space * 2)));
+}
+
+// Keyframes and Animations
+@mixin animation($animate...) {
+    $max: length($animate);
+    $animations: '';
+
+    @for $i from 1 through $max {
+        $animations: #{$animations + nth($animate, $i)};
+
+        @if $i < $max {
+            $animations: #{$animations + ", "};
         }
     }
-    @else if $exp < 0 {
-        @for $i from 1 through -$exp {
-            $value: $value / $number;
-        }
-    }
-    @return $value;
+    -webkit-animation: $animations;
+    -moz-animation:    $animations;
+    -o-animation:      $animations;
+    animation:         $animations;
 }
 
-@function fact($number) {
-    $value: 1;
-    @if $number > 0 {
-        @for $i from 1 through $number {
-            $value: $value * $i;
-        }
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
     }
-    @return $value;
-}
-
-@function pi() {
-    @return 3.14159265359;
-}
-
-@function rad($angle) {
-    $unit: unit($angle);
-    $unitless: $angle / ($angle * 0 + 1);
-    // If the angle has 'deg' as unit, convert to radians.
-    @if $unit == deg {
-        $unitless: $unitless / 180 * pi();
+    @-moz-keyframes #{$animationName} {
+        @content;
     }
-    @return $unitless;
-}
-
-@function sin($angle) {
-    $sin: 0;
-    $angle: rad($angle);
-    // Iterate a bunch of times.
-    @for $i from 0 through 10 {
-        $sin: $sin + pow(-1, $i) * pow($angle, (2 * $i + 1)) / fact(2 * $i + 1);
+    @-o-keyframes #{$animationName} {
+        @content;
     }
-    @return $sin;
-}
-
-@function cos($angle) {
-    $cos: 0;
-    $angle: rad($angle);
-    // Iterate a bunch of times.
-    @for $i from 0 through 10 {
-        $cos: $cos + pow(-1, $i) * pow($angle, 2 * $i) / fact(2 * $i);
+    @keyframes #{$animationName} {
+        @content;
     }
-    @return $cos;
-}
-
-@function tan($angle) {
-    @return sin($angle) / cos($angle);
-}
-
-@mixin angle-machine($top-angle:0deg, $top-direction:false, $bottom-angle:0deg, $bottom-direction:false) {
-    $top-height: (tan($top-angle) * 100) + vw;
-    $top-clip: 0 0, 100% 0;
-    $bottom-height: (tan($bottom-angle) * 100) + vw;
-    $bottom-clip: 100% 100%, 0 100%;
-
-    @if $top-direction == left {
-        $top-clip: 0 0, 100% #{$top-height};
-    }
-
-    @if $top-direction == right {
-        $top-clip: 0 #{$top-height}, 100% 0;
-    }
-
-    @if $bottom-direction == left {
-        $bottom-clip: 100% 100%, 0 calc(100% - #{$bottom-height});
-    }
-
-    @if $bottom-direction == right {
-        $bottom-clip: 100% calc(100% - #{$bottom-height}), 0 100%;
-    }
-
-    padding-top: #{$top-height};
-    padding-bottom: #{$bottom-height};
-    -webkit-clip-path: polygon(#{$top-clip}, #{$bottom-clip});
-    clip-path: polygon(#{$top-clip}, #{$bottom-clip});
 }
 
 // Hacks

@@ -17,16 +17,319 @@ Table of Contents
 
 @import "assets/variables";
 @import "assets/mixins";
+@import 'https://fonts.googleapis.com/css?family=Lato:100,300,400,700';
+@import url('https://fonts.googleapis.com/css?family=Dosis:200,300,400,500');
+
+/** Class Helpers **/
+.or-separator {
+    display: block;
+    width: 70%;
+    margin: $padding auto;
+    position: relative;
+    border-bottom: 2px dashed $borderColor;
+    text-align: center;
+    color: $textColorLight;
+
+    span {
+        position: relative;
+        z-index: 2;
+        background: white;
+        padding: 0 $padding;
+        bottom: -12px;
+    }
+}
+
+.display-none {
+    display: none !important;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0 !important;
+}
+
+.no-padding-right {
+    padding-right: 0 !important;
+}
+
+.no-padding-left {
+    padding-left: 0 !important;
+}
+
+.bg-white {
+    background: white;
+}
+
+.bg-grey {
+    background: $bodyColor;
+}
+
+.bg-dark {
+    background: $bodyColorDark;
+}
+
+.bg-red {
+    background: $redAlert !important;
+    color: white;
+}
+
+.bg-green {
+    background: $greenAlert !important;
+    color: white;
+}
+
+.bg-blue {
+    background: $blueAlert !important;
+    color: white;
+}
+
+.bg-yellow {
+    background: $yellowAlert !important;
+    color: $textColor;
+}
+
+.bg-ltorange {
+    background: $ltorange !important;
+    color: $textColor;
+}
+
+.color-light {
+    color: $textColorLight !important;
+}
+
+.color-red {
+    color: $redAlert !important;
+}
+
+.color-green {
+    color: $greenAlert !important;
+}
+
+.color-blue {
+    color: $blueAlert !important;
+}
+
+.color-yellow {
+    color: $yellowAlert !important;
+}
+
+.color-grey {
+    color: $textColorLight !important;
+}
+
+.align-bottom {
+    height: 100%;
+    @include flexbox-col(bottom);
+    align-self: center;
+}
+
+.align-center, .align-middle {
+    @include flexbox-col(center);
+}
+
+.align-bottom, .aligh-center, .align-middle {
+    height: 100%;
+
+    img {
+        -webkit-align-self: center;
+        align-self: center;
+    }
+}
+
+.button {
+    position: relative;
+    text-transform: uppercase;
+    border: none;
+    color: $white;
+    background: $primaryColor;
+    display: inline-block;
+    font-size: $fontSizeSmall;
+    font-weight: $fontNormal;
+    margin: 0;
+    padding: 0 $padding-lg;
+    height: $inputSize;
+    line-height: $inputSize;
+    letter-spacing: 1px;
+    cursor: pointer;
+    vertical-align: middle;
+    overflow: hidden;
+    @include border-radius(3px);
+    @include transition(all 200ms ease-in);
+    @include box-shadow(0 1px 2px rgba(0,0,0,.1));
+
+    i {
+        display: inline-block;
+        margin-right: $padding-sm;
+        //font-size: 1.15*$fontSize;
+    }
+
+    &:hover {
+        background: lighten($primaryColor, 2%);
+        color: $white;
+        @include transform(translate(0, -3px));
+        @include box-shadow(0 3px 15px 0 rgba(0,0,0,0.2));
+        @include transition(all 200ms ease-in);
+    }
+
+    &.button-disabled {
+        background: $bodyColor;
+        color: $textColor;
+        cursor: not-allowed;
+        @include box-shadow(none);
+
+        &:hover {
+            @include transform(translate(0));
+            @include box-shadow(none);
+        }
+    }
+
+    &.button-blue {
+        background: $tirtiaryColor;
+        color: white;
+
+        &:hover {
+            background: lighten($tirtiaryColor, 2%);
+        }
+    }
+
+    &.button-green {
+        background: $greenAlert;
+        color: white;
+
+        &:hover {
+            background: darken($greenAlert, 5%);
+        }
+    }
+
+    &.button-red {
+        background: $redAlert;
+        color: white;
+
+        &:hover {
+            background: darken($redAlert, 5%);
+        }
+    }
+
+    &.button-facebook {
+        background: $facebook;
+        color: white;
+
+        &:hover {
+            background: lighten($facebook, 2%);
+        }
+    }
+
+    &.button-has-icon, &.has-icon {
+        padding: 0 $padding-lg 0 ($inputSize + $padding);
+
+        i {
+            display: block;
+            background: rgba(0,0,0,0.1);
+            width: $inputSize;
+            height: $inputSize;
+            line-height: $inputSize;
+            text-align: center;
+            position: absolute;
+            left: 0;
+            top: 0;
+            margin: 0;
+        }
+    }
+
+    &.button-sm {
+        height: $inputSizeSm;
+        line-height: $inputSizeSm;
+
+        &.button-has-icon, &.has-icon {
+            padding: 0 $padding-lg 0 ($inputSizeSm + $padding);
+
+            i {
+                width: $inputSizeSm;
+                height: $inputSizeSm;
+                line-height: $inputSizeSm;
+            }
+        }
+    }
+
+    &.button-lg {
+        height: $inputSizeLg;
+        line-height: $inputSizeLg;
+
+        &.button-has-icon, &.has-icon {
+            padding: 0 $padding-lg 0 ($inputSizeLg + $padding);
+
+            i {
+                width: $inputSizeLg;
+                height: $inputSizeLg;
+                line-height: $inputSizeLg;
+            }
+        }
+    }
+}
+
+.lead {
+    font-weight: $fontNormal;
+    color: $textColorLight;
+}
 
 /** Navigation **/
 
-header {
+.header {
     z-index: 10;
     position: relative;
+    letter-spacing: 0.015em;
     @extend %clearfix;
 
     // Nav Style 1
     &.style-1 {
+        font-size: $fontSizeNav;
+
+        .sub-header {
+            height: $subHeaderSize;
+            line-height: $subHeaderSize;
+            font-size: .8*$fontSize;
+            color: $textColorLight;
+        }
+
+        nav {
+            height: $navSizeMobile;
+
+            .navbar-brand {
+                color: $textColorDark;
+                font-weight: 700;
+                font-size: 24px;
+            }
+
+            ul {
+                text-transform: uppercase;
+
+                li {
+                    a {
+                        color: $textColor;
+
+                        &:hover {
+                            color: $textColorDark;
+                        }
+                    }
+                }
+
+                .dropdown-menu {
+                    text-transform: none;
+                    border: 1px solid $borderColor;
+                    font-size: $fontSizeNav;
+                    color: $textColor;
+                    @include border-radius(5px);
+                    @include box-shadow(0 0 25px 0 rgba(0, 0, 0, 0.08));
+
+                    .dropdown-item {
+                        padding: $padding-xs $padding-lg;
+                    }
+                }
+            }
+        }
+    }
+
+    // Nav Style 1
+    &.style-2 {
         background: $navBgColor;
         color: $navTextColor;
         @include box-shadow(0 1px 1px rgba(0,0,0,0.1));
@@ -37,22 +340,27 @@ header {
             height: $subHeaderSize;
             line-height: $subHeaderSize;
             font-size: .8*$fontSize;
-            font-weight: $fontBold;
             color: $textColorLight;
         }
-    }
 
-    nav {
-        height: $navSize;
+        nav {
+            height: $navSize;
+            text-transform: uppercase;
 
-        ul {
-            li {
-                a {
+            ul {
+                li {
+                    a {
 
+                    }
                 }
             }
         }
     }
+}
+
+section {
+    border-top: 1px solid #ebebeb;
+    min-height: 300px;
 }
 
 /** List Styles **/
@@ -66,6 +374,10 @@ header {
         display: inline-block;
         list-style-type: none;
         margin-right: $padding;
+
+        &:last-child {
+            margin-right: 0;
+        }
 
         a {
             display: block;
