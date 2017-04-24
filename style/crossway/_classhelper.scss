@@ -49,6 +49,26 @@ img, .img-responsive {
     }
 }
 
+// Paddings
+.ptb {
+    $b: &;
+
+    &-1 {
+        padding-top: 25px !important;
+        padding-bottom: 25px !important;
+    }
+
+    &-2 {
+        padding-top: 50px !important;
+        padding-bottom: 50px !important;
+    }
+
+    &-3 {
+        padding-top: 75px !important;
+        padding-bottom: 75px !important;
+    }
+}
+
 // Backgrounds
 .bg {
     $b: &;
@@ -235,5 +255,22 @@ img, .img-responsive {
     img {
         -webkit-align-self: center;
         align-self: center;
+    }
+}
+
+// Positions
+.position {
+    $b: &;
+
+    &-relative {
+        position: relative;
+    }
+
+    &-absolute {
+        position: absolute;
+    }
+
+    &-absolute {
+        position: static;
     }
 }

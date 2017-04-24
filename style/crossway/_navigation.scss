@@ -5,14 +5,12 @@
 .navigation {
     z-index: 10;
     width: 100%;
-    position: absolute;
     letter-spacing: 0.015em;
     @extend %clearfix;
 
     // Nav Style 1
     &.style-1 {
         font-size: $fontSizeNav;
-        position: absolute;
         top: 0;
 
         .sub-header {

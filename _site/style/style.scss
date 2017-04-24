@@ -23,3 +23,36 @@
         border-bottom: 1px solid $borderColor;
     }
 }
+
+.demoicons {
+    .theme-icon-search {
+        text-align: center;
+        display: block;
+        max-width: 500px;
+        margin: 0 auto 50px;
+
+        input {
+            width: 100%;
+            height: $inputSize;
+            padding: 0 $padding-sm;
+        }
+    }
+
+    .icon-section {
+        margin-bottom: $padding-xl;
+
+        .icon-container {
+            padding-top: $padding-sm;
+            padding-bottom: $padding-sm;
+
+            span {
+                display: inline-block;
+            }
+
+            i {
+                display: inline-block;
+                width: 40px;
+            }
+        }
+    }
+}
