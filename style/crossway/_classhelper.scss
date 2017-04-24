@@ -1,0 +1,239 @@
+/** Class Helpers **/
+.btn {
+    border-color: $borderColor;
+}
+
+img, .img-responsive {
+    max-width: 100%;
+}
+
+.or-separator {
+    display: block;
+    width: 70%;
+    margin: $padding auto;
+    position: relative;
+    border-bottom: 2px dashed $borderColor;
+    text-align: center;
+    color: $textColorLight;
+
+    span {
+        position: relative;
+        z-index: 2;
+        background: white;
+        padding: 0 $padding;
+        bottom: -12px;
+    }
+}
+
+.display-none {
+    display: none !important;
+}
+
+.no {
+    $b: &;
+
+    &-margin-bottom {
+        margin-bottom: 0 !important;
+    }
+
+    &-padding-right {
+        padding-right: 0 !important;
+    }
+
+    &-padding-left {
+        padding-left: 0 !important;
+    }
+
+    &-borders {
+        border: none;
+    }
+}
+
+// Backgrounds
+.bg {
+    $b: &;
+
+    &-dark, &-blue, &-red, &-green {
+        color: white;
+
+        h1, h2, h3, h4, h5, h6, a, .lead {
+            color: white;
+        }
+    }
+
+    &-dark {
+        background: $bodyColorDark;
+    }
+
+    &-white {
+        background: white;
+    }
+
+    &-grey {
+        background: $bodyColor;
+    }
+
+    &-red {
+        background: $redAlert !important;
+    }
+
+    &-green {
+        background: $greenAlert !important;
+    }
+
+    &-blue {
+        background: $blueAlert !important;
+    }
+
+    &-yellow {
+        background: $yellowAlert !important;
+        color: $textColor;
+    }
+
+    &-ltorange {
+        background: $ltorange !important;
+        color: $textColor;
+    }
+
+    &-image {
+        position: relative;
+
+        .bg-image-holder {
+            will-change: transform, top;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-size: cover !important;
+            background-position: 50% 50% !important;
+            z-index: 0;
+            @include transition(0.3s linear);
+
+            img {
+                display: none;
+            }
+        }
+    }
+}
+
+.has {
+    $b: &;
+
+    &-overlay {
+        &:before {
+            position: absolute;
+            content: '';
+            background: $bodyColorDark;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            @include opacity(.65);
+        }
+
+        > div:not(.bg-image-holder) {
+            z-index: 1;
+            color: white;
+
+            h1, h2, h3, h4, h5, h6, a, .lead {
+                color: white;
+            }
+        }
+    }
+}
+
+// Font Colors
+.color {
+    $b: &;
+
+    &-light {
+        color: $textColorLight !important;
+    }
+
+    &-red {
+        color: $redAlert !important;
+    }
+
+    &-green {
+        color: $greenAlert !important;
+    }
+
+    &-blue {
+        color: $blueAlert !important;
+    }
+
+    &-yellow {
+        color: $yellowAlert !important;
+    }
+
+    &-grey {
+        color: $textColorLight !important;
+    }
+}
+
+// Heights
+.height {
+    $b: &;
+
+    &-1 {
+        height: 10vh;
+    }
+
+    &-2 {
+        height: 20vh;
+    }
+
+    &-3 {
+        height: 30vh;
+    }
+
+    &-4 {
+        height: 40vh;
+    }
+
+    &-5 {
+        height: 50vh;
+    }
+
+    &-6 {
+        height: 60vh;
+    }
+
+    &-7 {
+        height: 70vh;
+    }
+
+    &-8 {
+        height: 80vh;
+    }
+
+    &-9 {
+        height: 90vh;
+    }
+
+    &-10 {
+        height: 100vh;
+    }
+}
+
+// Alignments
+.align-bottom {
+    height: 100%;
+    @include flexbox-col(bottom);
+    align-self: center;
+}
+
+.align-center, .align-middle {
+    @include flexbox-col(center);
+}
+
+.align-bottom, .aligh-center, .align-middle {
+    height: 100%;
+
+    img {
+        -webkit-align-self: center;
+        align-self: center;
+    }
+}

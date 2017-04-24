@@ -1,0 +1,12 @@
+/** Services **/
+
+.service {
+
+    &.style {
+        $b: &;
+
+        &-1 {
+
+        }
+    }
+}

@@ -1,0 +1,28 @@
+# Setup
+name:                CrossWay Framework
+title:               BeeBack App
+tagline:             Opensource Templating System
+author:              FWPolice
+author_email:        support@fwpolice.com
+url:                 http://localhost:4000
+baseurl:             ''
+permalink:           pretty
+exclude:             [README.markdown]
+analytics_id:
+
+# Owner/author information
+owner:
+  name:           FWPolice
+  avatar:         logo.png
+  bio:            "Free graphic resources and templates."
+  email:          support@fwpolice.com
+  twitter:        FWPolice
+  github:         iamshipon1988
+  instagram:      fwpolice
+  location:       "New York, NY"
+
+
+# Custom vars
+version:             1.0.1
+github:
+  repo:

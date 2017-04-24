@@ -1,0 +1,10 @@
+/** Forms **/
+
+.form-group {
+    margin: .5rem 0;
+    @extend %clearfix;
+}
+
+select[multiple] {
+    overflow: scroll;
+}
