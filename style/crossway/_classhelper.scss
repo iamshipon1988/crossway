@@ -238,6 +238,55 @@ img, .img-responsive {
     }
 }
 
+// Extend Paddings
+.pt {
+    $b: &;
+
+    &-6 {
+        padding-top: 4rem;
+    }
+
+    &-7 {
+        padding-top: 5rem;
+    }
+
+    &-8 {
+        padding-top: 6rem;
+    }
+
+    &-9 {
+        padding-top: 7rem;
+    }
+
+    &-10 {
+        padding-top: 8rem;
+    }
+}
+
+.pb {
+    $b: &;
+
+    &-6 {
+        padding-bottom: 4rem;
+    }
+
+    &-7 {
+        padding-bottom: 5rem;
+    }
+
+    &-8 {
+        padding-bottom: 6rem;
+    }
+
+    &-9 {
+        padding-bottom: 7rem;
+    }
+
+    &-10 {
+        padding-bottom: 8rem;
+    }
+}
+
 // Alignments
 .align-bottom {
     height: 100%;
@@ -270,7 +319,7 @@ img, .img-responsive {
         position: absolute;
     }
 
-    &-absolute {
+    &-static {
         position: static;
     }
 }

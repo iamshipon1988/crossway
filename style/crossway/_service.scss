@@ -6,7 +6,61 @@
         $b: &;
 
         &-1 {
+            .item {
+                position: relative;
+                margin: $padding 0;
+                text-align: center;
 
+                .icon {
+                    display: block;
+                    font-size: 30px;
+                    color: $primaryColor;
+                }
+
+                .content {
+                    h1, h2, h3, h4, h5, h6 {
+                        margin-bottom: $padding-sm;
+                        font-size: 1.15rem;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        font-weight: 500;
+                    }
+
+                    p {
+                        color: $textColorLight;
+                    }
+                }
+            }
+        }
+
+        &-2 {
+            .item {
+                position: relative;
+                margin: $padding 0;
+                padding-left: $inputSizeLg;
+
+                .icon {
+                    position: absolute;
+                    left: 0;
+                    top: -2px;
+                    font-size: 30px;
+                    color: $primaryColor;
+                }
+
+                .content {
+                    h1, h2, h3, h4, h5, h6 {
+                        margin-bottom: $padding-sm;
+                        font-size: 1.15rem;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        font-weight: 500;
+                    }
+
+                    p {
+                        color: $textColorLight;
+                    }
+                }
+            }
         }
     }
 }
