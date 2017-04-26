@@ -126,9 +126,13 @@ img, .img-responsive {
             top: 0;
             left: 0;
             background-size: cover !important;
-            background-position: 50% 50% !important;
+            background-position: 50% 50%;
             z-index: 0;
             @include transition(0.3s linear);
+
+            &.bg-contain {
+                background-size: contain !important;
+            }
 
             img {
                 display: none;
@@ -287,6 +291,54 @@ img, .img-responsive {
     }
 }
 
+.pl {
+    $b: &;
+
+    &-6 {
+        padding-left: 4rem;
+    }
+
+    &-7 {
+        padding-left: 5rem;
+    }
+
+    &-8 {
+        padding-left: 6rem;
+    }
+
+    &-9 {
+        padding-left: 7rem;
+    }
+
+    &-10 {
+        padding-left: 8rem;
+    }
+}
+
+.pr {
+    $b: &;
+
+    &-6 {
+        padding-right: 4rem;
+    }
+
+    &-7 {
+        padding-right: 5rem;
+    }
+
+    &-8 {
+        padding-right: 6rem;
+    }
+
+    &-9 {
+        padding-right: 7rem;
+    }
+
+    &-10 {
+        padding-right: 8rem;
+    }
+}
+
 // Alignments
 .align-bottom {
     height: 100%;
@@ -321,5 +373,35 @@ img, .img-responsive {
 
     &-static {
         position: static;
+    }
+}
+
+// Font-Sizes
+
+.font {
+    $b: &;
+
+    &-2x {
+        font-size: 2*$fontSize !important;
+    }
+
+    &-3x {
+        font-size: 3*$fontSize !important;
+    }
+
+    &-4x {
+        font-size: 4*$fontSize !important;
+    }
+
+    &-5x {
+        font-size: 5*$fontSize !important;
+    }
+
+    &-bold {
+        font-weight: bold !important;
+    }
+
+    &-italic {
+        font-style: italic !important;
     }
 }

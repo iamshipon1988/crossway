@@ -1,27 +1,76 @@
 /** List Styles **/
 
-.vertical-list {
-    width: auto;
-    padding: 0;
-    margin: 0;
+.list {
+    &.vertical {
+        width: auto;
+        padding: 0;
+        margin: 0;
 
-    li {
-        display: inline-block;
-        list-style-type: none;
-        margin-right: $padding;
-
-        &:last-child {
-            margin-right: 0;
-        }
-
-        a {
-            display: block;
-            text-decoration: none;
-        }
-
-        .icon {
+        li {
             display: inline-block;
-            margin-right: .5*$padding;
+            list-style-type: none;
+            margin-right: $padding;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            a {
+                display: block;
+                text-decoration: none;
+            }
+
+            .icon {
+                display: inline-block;
+                margin-right: .5*$padding;
+            }
+        }
+    }
+
+    &.timeline {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        counter-reset: list-counter;
+        display: block;
+
+        li {
+            display: block;
+            min-height: 2rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            padding-left: 3rem;
+            position: relative;
+            @include linear-gradient(180deg, $borderColor 0%, $borderColor 100%);
+            background-repeat: no-repeat;
+            background-size: 2px 100%;
+            background-position: 1rem center;
+
+            @for $i from 1 through 10 {
+                &:nth-child(#{$i}) {
+                    &::before {
+                        background-position: center #{$i}0%;
+                    }
+                }
+            }
+
+            &::before {
+                background: #0082d5;
+                @include linear-gradient(180deg, $blueAlert 0%, $redAlert 100%);
+                background-repeat: no-repeat;
+                background-size: 2rem 20rem;
+                border-radius: 50%;
+                color: white;
+                content: counter(list-counter);
+                counter-increment: list-counter;
+                display: block;
+                height: 2rem;
+                left: 0;
+                line-height: 2;
+                position: absolute;
+                text-align: center;
+                width: 2rem;
+            }
         }
     }
 }

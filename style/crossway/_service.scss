@@ -62,5 +62,150 @@
                 }
             }
         }
+
+        &-3 {
+            .item {
+                position: relative;
+                margin: $padding 0;
+                padding: $padding-lg;
+                text-align: center;
+                border: 1px dotted $borderColorDark;
+                @include transition(all 0.3s);
+
+                .icon {
+                    display: block;
+                    color: $primaryColor;
+                }
+
+                .content {
+                    @include transition(all 0.3s);
+
+                    h1, h2, h3, h4, h5, h6 {
+                        margin-bottom: $padding-sm;
+                        font-size: 1.15rem;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        font-weight: 500;
+                        @include transition(all 0.3s);
+                    }
+
+                    p {
+                        color: $textColorLight;
+                        font-size: 14px;
+                        @include transition(all 0.3s);
+
+                        &.read-more {
+                            margin: 0;
+
+                            a {
+                                display: block;
+                                text-align: center;
+                                color: $primaryColor;
+                                text-decoration: none;
+                                border: none;
+                                font-weigth: bold;
+                            }
+                        }
+                    }
+                }
+
+                &:hover {
+                    background: $primaryColor;
+                    border: 1px solid $primaryColor;
+                    @include transition(all 0.3s);
+
+                    .icon {
+                        color: white;
+                    }
+
+                    .content {
+                        color: white;
+                        @include transition(all 0.3s);
+
+                        h1, h2, h3, h4, h5, h6, p {
+                            color: white;
+                            @include transition(all 0.3s);
+
+                            a {
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &-4 {
+            .item {
+                position: relative;
+                margin: $padding 0;
+                padding: $padding-xl $padding-xl $padding-xl 2*$inputSizeLg;
+                border: 1px dotted $borderColorDark;
+                @include transition(all 0.3s);
+
+                .icon {
+                    position: absolute;
+                    left: $padding-xl;
+                    top: $padding-lg;
+                    color: $primaryColor;
+                }
+
+                .content {
+                    @include transition(all 0.3s);
+
+                    h1, h2, h3, h4, h5, h6 {
+                        margin-bottom: $padding-sm;
+                        font-size: 1.15rem;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        font-weight: 500;
+                        @include transition(all 0.3s);
+                    }
+
+                    p {
+                        color: $textColorLight;
+                        font-size: 14px;
+                        @include transition(all 0.3s);
+
+                        &.read-more {
+                            margin: 0;
+
+                            a {
+                                display: block;
+                                text-align: left;
+                                color: $primaryColor;
+                                text-decoration: none;
+                                border: none;
+                                font-weigth: bold;
+                            }
+                        }
+                    }
+                }
+
+                &:hover {
+                    background: $primaryColor;
+                    border: 1px solid $primaryColor;
+                    @include transition(all 0.3s);
+
+                    .icon {
+                        color: white;
+                    }
+
+                    .content {
+                        color: white;
+                        @include transition(all 0.3s);
+
+                        h1, h2, h3, h4, h5, h6, p {
+                            color: white;
+                            @include transition(all 0.3s);
+
+                            a {
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

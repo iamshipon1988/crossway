@@ -1,28 +1,14 @@
-{% assign current = page.url | downcase | split: '/' %}
+<div class="navigation style-1">
+    {% include _navigation-subnav.html %}
+    <nav class="navbar navbar-toggleable-md">
+        <div class="container">
+            {% include _navigation-toggle.html %}
 
-<!-- Main Menu -->
-<ul class="navbar-nav ml-auto justify-content-end">
-    <li class="nav-item {% if current[1] == 'about' %}active{% endif %}">
-        <a href="{{ site.url }}/about" class="nav-link">About</a>
-    </li>
-    <li class="nav-item dropdown {% if current[1] == 'about' %}active{% endif %}">
-        <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdownNav01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
-        <div class="dropdown-menu" aria-labelledby="dropdownNav01">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+            {% include _logo.html %}
+
+            <div class="collapse navbar-collapse" id="containerNavbar">
+                {% include _navigation-links.html %}
+            </div>
         </div>
-    </li>
-    <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdownNav02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blocks</a>
-        <div class="dropdown-menu" aria-labelledby="dropdownNav02">
-            <a class="dropdown-item" href="{{ site.baseurl }}/blocks/icons">Icons</a>
-            <a class="dropdown-item" href="{{ site.baseurl }}/blocks/services">Services</a>
-            <a class="dropdown-item" href="{{ site.baseurl }}/blocks/forms">Forms</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-    </li>
-    <li class="nav-item ml-3">
-        <a class="nav-button button button-sm button-blue" href="#">Download</a>
-    </li>
-</ul>
+    </nav>
+</div>

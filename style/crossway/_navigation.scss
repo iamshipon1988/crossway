@@ -95,4 +95,37 @@
             }
         }
     }
+
+    @media (max-width: $grid-md - 1px) {
+        .sub-header {
+            text-align: center;
+
+            ul {
+                text-align: center;
+            }
+        }
+
+        nav {
+            padding: 5px 0 0;
+            z-index: 10;
+
+            .container {
+                width: 100%;
+
+                .navbar-brand {
+                    padding-left: 1rem;
+                }
+
+                .navbar-toggler {
+                    padding-top: 12px;
+                }
+            }
+
+            .navbar-collapse {
+                background: white;
+                z-index: 10;
+                padding: .5rem 1rem;
+            }
+        }
+    }
 }

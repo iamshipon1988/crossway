@@ -23,7 +23,6 @@ body {
 
     @media screen and (max-width: $grid-md) {
         padding-left: 0;
-        padding-top: 0.65*$navSize;
     }
 }
 
@@ -159,4 +158,12 @@ section {
     font-weight: $fontNormal;
     color: $textColorLight;
     margin: 0 0 $padding-lg;
+}
+
+pre {
+    background-color: $bodyColor;
+    border: 1px solid $borderColor;
+    padding: $padding-lg;
+    font-size: 13px;
+    @include border-radius(4px);
 }
