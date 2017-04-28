@@ -29,6 +29,21 @@
 
 @import "crossway/cover";
 
+@import "crossway/cta";
+
 @import "crossway/service";
 
 @import "crossway/footer";
+
+
+.feature {
+    position: relative;
+
+    &.style {
+        $b: &;
+
+        &-1 {
+
+        }
+    }
+}

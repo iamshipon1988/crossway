@@ -87,6 +87,16 @@
         }
     }
 
+    &.button-white {
+        background: $white;
+        color: $primaryColor;
+        border: none;
+
+        &:hover {
+            background: darken($white, 5%);
+        }
+    }
+
     &.button-facebook {
         background: $facebook;
         color: white;

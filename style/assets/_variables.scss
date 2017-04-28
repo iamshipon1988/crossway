@@ -1,7 +1,8 @@
 // Fonts
-$fontSize:        16px;
+$fontSize:        15px;
 $fontSizeSmall:   13px;
-$fontSizeLarge:   20px;
+$fontSizeLarge:   17px;
+$fontSizexLarge:  20px;
 $fontSizeNav:     13px;
 $fontPrimary:     'Lato', 'Helvetica Neue', 'Lucida Grande', Arial, Verdana, sans-serif;
 $fontHeader:      'Dosis', 'Lato', 'Helvetica Neue', 'Lucida Grande', Arial, Verdana, sans-serif;
@@ -9,7 +10,7 @@ $fontLight:       100;
 $fontNormal:      400;
 $fontBold:        700;
 $fontStyle:       normal;
-$letterSpacing:   0;
+$letterSpacing:   0.0075em;
 $lineHeight:      1.57;
 
 // Sizes
@@ -58,6 +59,7 @@ $greenAlert:      #00bf86;
 $redAlert:        #DD6777;
 $blueAlert:       #4a90e2;
 $yellowAlert:     #ffeb3b;
+$tealAlert:       #00cade;
 $ltorange:        lighten($secondaryColor, 20%);
 
 // Social Media Brand Colors
