@@ -82,7 +82,7 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 
-<body id="top homePage">
+<body id="top blockPage">
     <div class="navigation style-1">
     
     <div class="sub-header hidden-md-down">
@@ -145,7 +145,8 @@
             <a class="dropdown-item" href="/blocks/services">Services</a>
             <a class="dropdown-item" href="/blocks/features">Features</a>
             <a class="dropdown-item" href="/blocks/forms">Forms</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+            <a class="dropdown-item" href="/blocks/cta">Call To Action</a>
+            <a class="dropdown-item" href="#">More Coming Soon!</a>
         </div>
     </li>
         <li class="nav-item ">
@@ -306,14 +307,14 @@
     		</div>
             <div class="row">
     			<div class="col-sm-6">
-                    <div class="checkbox"><input type="checkbox" name="checkbox1" id="checkbox1" /> <label for="checkbox1">Checkbox 1</label></div>
-                    <div class="checkbox"><input type="checkbox" name="checkbox2" id="checkbox2" /> <label for="checkbox2">Checkbox 1</label></div>
-                    <div class="checkbox"><input type="checkbox" name="checkbox3" id="checkbox3" disabled /> <label for="checkbox3">Checkbox 1</label></div>
+                    <div class="checkbox"><input type="checkbox" name="checkbox4" id="checkbox4" /> <label for="checkbox4">Checkbox 1</label></div>
+                    <div class="checkbox"><input type="checkbox" name="checkbox5" id="checkbox5" /> <label for="checkbox5">Checkbox 1</label></div>
+                    <div class="checkbox"><input type="checkbox" name="checkbox6" id="checkbox6" disabled /> <label for="checkbox6">Checkbox 1</label></div>
                 </div>
     			<div class="col-sm-6">
-                    <div class="radio"><input type="radio" name="radiogroup1" id="radiogroup1" /> <label for="radiogroup1">Radio Button 1</label></div>
-                    <div class="radio"><input type="radio" name="radiogroup1" id="radiogroup2" /> <label for="radiogroup2">Radio Button 2</label></div>
-                    <div class="radio"><input type="radio" name="radiogroup1" id="radiogroup3" disabled /> <label for="radiogroup3">Radio Button 3</label></div>
+                    <div class="radio"><input type="radio" name="radiogroup1" id="radiogroup4" /> <label for="radiogroup4">Radio Button 1</label></div>
+                    <div class="radio"><input type="radio" name="radiogroup1" id="radiogroup5" /> <label for="radiogroup5">Radio Button 2</label></div>
+                    <div class="radio"><input type="radio" name="radiogroup1" id="radiogroup6" disabled /> <label for="radiogroup6">Radio Button 3</label></div>
                 </div>
             </div>
         </form>
@@ -321,6 +322,48 @@
 </section>
 
 <section>
+    <div class="container">
+        <h4 class="text-center">Form Style 3</h4>
+        <form class="form style-3">
+            <div class="text-center">
+                <span>Hi, I'm</span>
+                <input type="text" name="name" id="name" placeholder="Full Name" />
+                <span>from</span>
+                <input type="text" name="company" id="company" placeholder="Company" /><br />
+                <span>I want to</span>
+                <div class="input-select">
+                    <select>
+                        <option selected disabled="disabled">Select One</option>
+                        <option>Hire</option>
+                        <option>Talk to</option>
+                        <option>Get a Quote from</option>
+                    </select>
+                </div>
+                <span>you about</span>
+                <input type="text" name="subject" id="subject" placeholder="subject" /><br />
+                <span>I am willing to pay </span>
+                <div class="input-select">
+                    <select>
+                        <option selected disabled="disabled">Select One</option>
+                        <option>< $5,000</option>
+                        <option>$5,000 - $10,000</option>
+                        <option>$10,000- $20,000</option>
+                        <option>$20,000 +</option>
+                    </select>
+                </div>
+                <span>and have it complete by </span>
+                <input type="date" name="date" id="date" placeholder="Date" /><br />
+                <span>You can reach me at</span>
+                <input type="tel" name="tel" id="tel" placeholder="Phone #" />
+                <span>or at</span>
+                <input type="email" name="email" id="date" placeholder="Email" /><br />
+                to discuss the project more in detail.
+            </div>
+        </form>
+    </div>
+</section>
+
+<section class="bg-grey">
     <div class="container">
         <h4>Button Colors</h4>
         <div class="row mb-5">
@@ -375,26 +418,20 @@
         <h4>How to Use</h4>
         <div class="row">
             <div class="col-lg-5">
-                <p>Most styles of forms share the same html and classes with one major difference, the style class. Choose between any form styles with the <code>.style-{#}</code> class. A couple of notes:</p>
+                <p>Form styles differ in multiple ways. Check the source code to see how each blocks are created. In some cases, labels are not used. Like other blocks, parent class controls the overall style. Few notes:</p>
                 <ol class="list timeline">
                     <li>Form elements need to be grouped inside of <code>.form-group</code> class.</li>
                     <li>For <code>.style-2</code> the <code>label</code> must come before the <code>input</code> tag.</li>
-                    <li>To add more spacing to the left, use bootstraps <code>.pl-{#}</code> class. CrossWay extends this function to <strong>10</strong>.</li>
-                    <li>Add alignment classes to the parent or to individual <code>.item</code> class to align to center, left, or right.</li>
+                    <li>The <code>select</code>, <code>checkbox</code>, <code>radio</code> all require a container to change it's default style.</li>
                 </ol>
             </div>
             <div class="col-lg-6 offset-lg-1">
 <pre>&lt;div class="<strong class="color-red">form style-1</strong>"&gt;
   &lt;div class="row"&gt;
     &lt;div class="col-md-4"&gt;
-      &lt;div class="card"&gt;
-        &lt;div class="icon <strong class="color-blue">font-3x</strong>"&gt;
-        &lt;i class="ti-gallery"&gt;&lt;/i&gt;
-      &lt;/div&gt;
-      &lt;div class="content"&gt;
-        &lt;h4&gt;Title&lt;/h4&gt;
-        &lt;p&gt;Description&lt;/p&gt;
-        &lt;p class="read-more"&gt;&lt;a href="#"&gt;Read More&lt;/a&gt;&lt;/p&gt;
+      &lt;div class="<strong class="color-blue">form-group</strong>"&gt;
+        &lt;label for="name"&gt; Full Name &lt;/div&gt;
+        &lt;input type="text" name="full-name" id="full-name" placeholder="John Doe"&gt;
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
