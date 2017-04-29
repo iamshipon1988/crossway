@@ -21,6 +21,14 @@ input:not([type="checkbox"]):not([type="radio"]), textarea, select {
 input, select {
     height: $inputSize;
     line-height: $inputSize;
+
+    &.input-lg {
+        height: $inputSizeLg;
+    }
+
+    &.input-sm {
+        height: $inputSizeSm;
+    }
 }
 
 textarea {
@@ -167,6 +175,40 @@ textarea {
             color: white;
             @include opacity(0);
             @include transition(all .4s ease);
+        }
+    }
+}
+
+.form-group {
+    position: relative;
+
+    &.has-error {
+        label {
+            color: $redAlert;
+        }
+
+        input {
+            border-color: $redAlert;
+        }
+    }
+
+    &.has-warning {
+        label {
+            color: $orangelAlert;
+        }
+
+        input {
+            border-color: $orangelAlert;
+        }
+    }
+
+    &.has-success {
+        label {
+            color: $greenAlert;
+        }
+
+        input {
+            border-color: $greenAlert;
         }
     }
 }

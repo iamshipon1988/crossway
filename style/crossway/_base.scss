@@ -158,13 +158,6 @@ section {
     }
 }
 
-.lead {
-    font-size: $fontSizeLarge;
-    font-weight: $fontNormal;
-    color: $textColorLight;
-    margin: 0 0 $padding-lg;
-}
-
 pre {
     background-color: $bodyColor;
     border: 1px solid $borderColor;
@@ -174,5 +167,38 @@ pre {
 
     code {
         color: $redAlert;
+    }
+}
+
+// Modify Bootstrap
+
+.lead {
+    font-size: $fontSizeLarge;
+    font-weight: $fontNormal;
+    color: $textColorLight;
+    margin: 0 0 $padding-lg;
+}
+
+.badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: $fontBold;
+    letter-spacing: 0.01em;
+    color: white;
+    text-transform: uppercase;
+    height: 26px;
+    line-height: 26px;
+    min-width: $navSizeMobile;
+    padding: 0 $padding;
+    text-align: center;
+    @include border-radius(3px);
+    $b: &;
+
+    &-pill {
+        @include border-radius(13px);
+    }
+
+    &-primary {
+        background: $primaryColor;
     }
 }

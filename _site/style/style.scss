@@ -56,3 +56,9 @@
         }
     }
 }
+
+.bs-component {
+    padding: $padding;
+    border: 1px solid $borderColor;
+    @include border-radius(4px);
+}

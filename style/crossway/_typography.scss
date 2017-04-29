@@ -11,13 +11,13 @@
             text-align: center;
 
             h1, h2, h3, h4, h5, h6 {
-                margin-bottom: 0;
+                margin-bottom: $padding;
             }
 
             p {
                 font-size: 1.25*$fontSize;
                 font-weight: 300;
-                max-width: 900px;
+                max-width: 700px;
                 margin-left: auto;
                 margin-right: auto;
 

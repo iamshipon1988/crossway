@@ -1,10 +1,209 @@
 /** Class Helpers **/
+
+// Bootstrap
 .btn {
     border-color: $borderColor;
 }
 
 img, .img-responsive {
     max-width: 100%;
+}
+
+.btn {
+    font-size: $fontSize;
+
+    &.btn-default {
+        background-color: $bodyColor;
+    }
+
+    &.btn-primary {
+        color: white !important;
+    }
+}
+
+.input-group-addon {
+    background: $bodyColor;
+    border-color: $borderColor;
+}
+
+.list-group {
+    .list-group-item {
+        position: relative;
+
+        &:hover, .active {
+            z-index: 1;
+        }
+
+        .badge {
+            min-width: 40px;
+            height: auto;
+            line-height: inherit;
+            padding: 2px $padding-xs;
+            border: none;
+            background: $primaryColor;
+            color: white;
+            margin-right: $padding-sm;
+        }
+    }
+}
+
+.tabs {
+    .nav-tabs {
+        > li {
+            border: 1px solid $borderColor;
+            border-bottom: none;
+            margin-right: -1px;
+            position: relative;
+
+            a {
+                display: block;
+                padding: $padding-sm $padding;
+                background: $bodyColor;
+            }
+
+            &.active {
+                border-color: $primaryColor;
+                z-index: 1;
+
+                a {
+                    color: white;
+                    background: $primaryColor;
+                }
+            }
+        }
+    }
+
+    .tab-pane {
+        padding: $padding;
+    }
+}
+
+.nav-pills {
+    > li {
+        border: 1px solid transparent;
+        @include border-radius(4px);
+        z-index: 1;
+
+        a {
+            display: block;
+            padding: $padding-xs $padding;
+            border: 1px solid transparent;
+
+            .badge {
+                min-width: 0;
+                height: auto;
+                line-height: inherit;
+                background: white;
+                color: $primaryColor;
+                padding: 2px $padding-xs;
+                border: none;
+            }
+        }
+
+        &:hover {
+            border-color: $primaryColor;
+        }
+
+        &.active {
+            border-color: $primaryColor;
+            background: $primaryColor;
+            color: white;
+
+            a {
+                color: white;
+            }
+        }
+    }
+
+    &.nav-stacked {
+        display: block;
+
+        li {
+            display: block;
+
+            a {
+                display: block;
+            }
+        }
+    }
+}
+
+.pagination {
+    li {
+        a {
+            display: block;
+            border: 1px solid transparent;
+            padding: $padding-xs $padding-sm;
+            @include border-radius(4px);
+        }
+
+        &:hover {
+            a {
+                border-color: $primaryColor;
+            }
+        }
+
+        &.active {
+            a {
+                border-color: $primaryColor;
+                background: $primaryColor;
+                color: white;
+            }
+        }
+    }
+}
+
+.pager {
+    display: flex;
+    list-style: none;
+    padding: 0;
+
+    li {
+        a {
+            display: block;
+            padding: $padding-xs $padding-sm;
+            border: 1px solid transparent;
+            @include border-radius(4px);
+        }
+
+        &:hover {
+            a {
+                border-color: $primaryColor;
+            }
+        }
+
+        &.active {
+            border-color: $primaryColor;
+            background: $primaryColor;
+            color: white;
+
+            a {
+                color: white;
+            }
+        }
+    }
+}
+
+.progress {
+    margin-bottom: $padding-sm;
+}
+
+.dropdown-menu {
+    border: 1px solid $borderColor;
+    font-size: $fontSizeNav;
+    color: $textColor;
+    @include border-radius(5px);
+    @include box-shadow(0 0 25px 0 rgba(0, 0, 0, 0.08));
+
+    li, .dropdown-item {
+        padding: 0;
+        background: transparent !important;
+
+        a {
+            display: block;
+            padding: $padding-xs $padding-lg;
+        }
+    }
 }
 
 .or-separator {
@@ -108,7 +307,7 @@ img, .img-responsive {
         background: white;
     }
 
-    &-grey {
+    &-grey, &-gray {
         background: $bodyColor;
     }
 
