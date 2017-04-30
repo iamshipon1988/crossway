@@ -437,7 +437,7 @@ img, .img-responsive {
 }
 
 // Font Colors
-.color {
+.text {
     $b: &;
 
     &-light {
@@ -447,97 +447,77 @@ img, .img-responsive {
     &-primary {
         color: $primaryColor !important;
     }
-
-    &-red {
-        color: $redAlert !important;
-    }
-
-    &-green {
-        color: $greenAlert !important;
-    }
-
-    &-blue {
-        color: $blueAlert !important;
-    }
-
-    &-yellow {
-        color: $yellowAlert !important;
-    }
-
-    &-grey {
-        color: $textColorLight !important;
-    }
 }
 
 // Heights
-.height {
+.vh {
     $b: &;
 
-    &-1 {
+    &-10 {
         height: 10vh;
     }
 
-    &-2 {
+    &-20 {
         height: 20vh;
     }
 
-    &-3 {
+    &-30 {
         height: 30vh;
     }
 
-    &-4 {
+    &-40 {
         height: 40vh;
     }
 
-    &-5 {
+    &-50 {
         height: 50vh;
     }
 
-    &-6 {
+    &-60 {
         height: 60vh;
     }
 
-    &-7 {
+    &-70 {
         height: 70vh;
     }
 
-    &-8 {
+    &-80 {
         height: 80vh;
     }
 
-    &-9 {
+    &-90 {
         height: 90vh;
     }
 
-    &-10 {
+    &-100 {
         height: 100vh;
     }
+}
 
-    .auto-height {
+.auto-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    position: relative;
+
+    > [class*='col-'], > .col {
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
-        -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
         position: relative;
 
-        > [class*='col-'], > .col {
-            display: -webkit-box;
-            display: -webkit-flex;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-            -webkit-flex-direction: column;
-            -ms-flex-direction: column;
-            flex-direction: column;
-            position: relative;
-
-            .box {
-                height: 100%;
-            }
+        .box {
+            height: 100%;
         }
     }
 }
