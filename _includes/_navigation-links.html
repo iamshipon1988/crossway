@@ -2,15 +2,18 @@
 
 <!-- Main Menu -->
 <ul class="navbar-nav ml-auto justify-content-end">
-    <li class="nav-item {% if current[1] == 'about' %}active{% endif %}">
+    <!--<li class="nav-item {% if current[1] == 'about' %}active{% endif %}">
         <a href="{{ site.url }}/about" class="nav-link">About</a>
-    </li>
+    </li>-->
     <li class="nav-item dropdown {% if current[1] == 'about' %}active{% endif %}">
         <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdownNav01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
         <div class="dropdown-menu" aria-labelledby="dropdownNav01">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+            <a class="dropdown-item" href="#">Corporate</a>
+            <a class="dropdown-item" href="#">Studio</a>
+            <a class="dropdown-item" href="#">Travel</a>
+            <a class="dropdown-item" href="#">Photography</a>
+            <a class="dropdown-item" href="#">Personal</a>
+            <a class="dropdown-item" href="#">Wedding</a>
         </div>
     </li>
     <li class="nav-item dropdown">
@@ -24,9 +27,12 @@
             <a class="dropdown-item" href="#">More Coming Soon!</a>
         </div>
     </li>
-        <li class="nav-item {% if current[1] == 'classhelper' %}active{% endif %}">
-            <a href="{{ site.url }}/blocks/helpers" class="nav-link">Helpers</a>
-        </li>
+    <li class="nav-item {% if current[1] == 'elements' %}active{% endif %}">
+        <a href="{{ site.url }}/blocks/elements" class="nav-link">Elements</a>
+    </li>
+    <li class="nav-item {% if current[1] == 'classhelper' %}active{% endif %}">
+        <a href="{{ site.url }}/blocks/helpers" class="nav-link">Helpers</a>
+    </li>
     <li class="nav-item ml-3">
         <a class="nav-button button button-sm button-blue" href="#">Download</a>
     </li>

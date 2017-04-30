@@ -59,6 +59,11 @@
 
 .bs-component {
     padding: $padding;
+    margin: $padding 0;
     border: 1px solid $borderColor;
     @include border-radius(4px);
+
+    &:hover {
+        border-color: $borderColorDark;
+    }
 }

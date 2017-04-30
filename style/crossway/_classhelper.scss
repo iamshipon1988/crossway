@@ -243,12 +243,41 @@ img, .img-responsive {
     }
 }
 
-.display-none {
-    display: none !important;
+// Displays
+.display {
+    $b: &;
+
+    &-none {
+        display: none !important;
+    }
+
+    &-block {
+        display: block !important;
+    }
+
+    &-inline {
+        display: inline !important;
+    }
+
+    &-inline-block {
+        display: inline-block !important;
+    }
+
+    &-table {
+        display: table !important;
+    }
+
+    &-flex {
+        display: flex !important;
+    }
 }
 
 .no {
     $b: &;
+
+    &-margin {
+        margin: 0 !important;
+    }
 
     &-margin-bottom {
         margin-bottom: 0 !important;
@@ -258,32 +287,45 @@ img, .img-responsive {
         padding-right: 0 !important;
     }
 
+    &-margin-top {
+        margin-top: 0 !important;
+    }
+
+    &-margin-left {
+        margin-left: 0 !important;
+    }
+
+    &-padding {
+        padding: 0 !important;
+    }
+
     &-padding-left {
         padding-left: 0 !important;
     }
 
+    &-padding-top {
+        padding-top: 0 !important;
+    }
+
+    &-padding-right {
+        padding-right: 0 !important;
+    }
+
+    &-padding-bottom {
+        padding-bottom: 0 !important;
+    }
+
     &-borders {
-        border: none;
-    }
-}
-
-// Paddings
-.ptb {
-    $b: &;
-
-    &-1 {
-        padding-top: 25px !important;
-        padding-bottom: 25px !important;
+        border: none !important;
     }
 
-    &-2 {
-        padding-top: 50px !important;
-        padding-bottom: 50px !important;
-    }
-
-    &-3 {
-        padding-top: 75px !important;
-        padding-bottom: 75px !important;
+    &-style {
+        border: none !important;
+        text-decoration: none !important;
+        font-style: normal !important;
+        font-weight: normal !important;
+        background: transparent !important;
+        color: $textColor !important;
     }
 }
 
@@ -501,6 +543,25 @@ img, .img-responsive {
 }
 
 // Extend Paddings
+.ptb {
+    $b: &;
+
+    &-1 {
+        padding-top: 25px !important;
+        padding-bottom: 25px !important;
+    }
+
+    &-2 {
+        padding-top: 50px !important;
+        padding-bottom: 50px !important;
+    }
+
+    &-3 {
+        padding-top: 75px !important;
+        padding-bottom: 75px !important;
+    }
+}
+
 .pt {
     $b: &;
 
@@ -597,6 +658,122 @@ img, .img-responsive {
     }
 }
 
+// Extended Margins
+.mtb {
+    $b: &;
+
+    &-1 {
+        margin-top: 25px !important;
+        margin-bottom: 25px !important;
+    }
+
+    &-2 {
+        margin-top: 50px !important;
+        margin-bottom: 50px !important;
+    }
+
+    &-3 {
+        margin-top: 75px !important;
+        margin-bottom: 75px !important;
+    }
+}
+
+.mt {
+    $b: &;
+
+    &-6 {
+        margin-top: 4rem;
+    }
+
+    &-7 {
+        margin-top: 5rem;
+    }
+
+    &-8 {
+        margin-top: 6rem;
+    }
+
+    &-9 {
+        margin-top: 7rem;
+    }
+
+    &-10 {
+        margin-top: 8rem;
+    }
+}
+
+.mb {
+    $b: &;
+
+    &-6 {
+        margin-bottom: 4rem;
+    }
+
+    &-7 {
+        margin-bottom: 5rem;
+    }
+
+    &-8 {
+        margin-bottom: 6rem;
+    }
+
+    &-9 {
+        margin-bottom: 7rem;
+    }
+
+    &-10 {
+        margin-bottom: 8rem;
+    }
+}
+
+.ml {
+    $b: &;
+
+    &-6 {
+        margin-left: 4rem;
+    }
+
+    &-7 {
+        margin-left: 5rem;
+    }
+
+    &-8 {
+        margin-left: 6rem;
+    }
+
+    &-9 {
+        margin-left: 7rem;
+    }
+
+    &-10 {
+        margin-left: 8rem;
+    }
+}
+
+.mr {
+    $b: &;
+
+    &-6 {
+        margin-right: 4rem;
+    }
+
+    &-7 {
+        margin-right: 5rem;
+    }
+
+    &-8 {
+        margin-right: 6rem;
+    }
+
+    &-9 {
+        margin-right: 7rem;
+    }
+
+    &-10 {
+        margin-right: 8rem;
+    }
+}
+
 // Alignments
 .align-bottom {
     height: 100%;
@@ -622,15 +799,27 @@ img, .img-responsive {
     $b: &;
 
     &-relative {
-        position: relative;
+        position: relative !important;
     }
 
     &-absolute {
-        position: absolute;
+        position: absolute !important;
     }
 
     &-static {
-        position: static;
+        position: static !important;
+    }
+
+    &-fixed {
+        position: fixed !important;
+    }
+
+    &-inherit {
+        position: inherit !important;
+    }
+
+    &-initial {
+        position: initial !important;
     }
 }
 
@@ -655,12 +844,28 @@ img, .img-responsive {
         font-size: 5*$fontSize !important;
     }
 
-    &-bold {
+    &-weight-light {
+        font-weight: 300 !important;
+    }
+
+    &-weight-normal {
+        font-weight: 400 !important;
+    }
+
+    &-weight-bold {
         font-weight: bold !important;
     }
 
-    &-italic {
+    &-style-italic {
         font-style: italic !important;
+    }
+
+    &-style-normal {
+        font-style: normal !important;
+    }
+
+    &-style-oblique {
+        font-style: oblique !important;
     }
 }
 
@@ -695,8 +900,10 @@ hr {
     height: auto;
     $b: &;
 
-    .img {
+    .img, img {
+        position: relative;
         max-width: 100%;
+        z-index: 1;
     }
 
     &-rounded {
@@ -710,7 +917,7 @@ hr {
     }
 
     &-shadow {
-        @include box-shadow(0 5px 15px rgba(0,0,0,0.05));
+        @include box-shadow(0 5px 15px rgba(0,0,0,0.15));
     }
 
     &-shadow-narrow {
@@ -733,7 +940,7 @@ hr {
             top:80%;
             width:45%;
             background: rgba(0,0,0,0.35);
-            z-index: -1;
+            z-index: 0;
             @include box-shadow(0 15px 15px rgba(0,0,0,0.35));
             @include transform(rotate(-6deg));
         }
@@ -748,7 +955,7 @@ hr {
             overflow: visible;
 
             img {
-                @include border-radius(5px);
+                //@include border-radius(5px);
             }
         }
     }
@@ -765,7 +972,7 @@ hr {
             left: $padding;
             bottom: 2.5*$padding;
             width: 15%;
-            z-index: -1;
+            z-index: 0;
             @include transform(rotate(-3deg));
         }
 
@@ -779,13 +986,30 @@ hr {
             overflow: visible;
 
             img {
-                @include border-radius(5px);
+                //@include border-radius(5px);
             }
         }
     }
 
-    &-layer {
+    &-shadow-layer {
         position: relative;
         @include box-shadow(0 2.5rem 2.5rem -2rem rgba(0,0,0,0.2));
+    }
+}
+
+.image.image-rounded {
+    img {
+        @include border-radius(5px);
+    }
+}
+
+.card-shadow, .card-shadow-narrow, .card-shadow-wide, .card-shadow-floating, .card-shadow-lifted, .card-shadow-layer {
+    background: white;
+    border: 1px solid $borderColor;
+
+    .card-block {
+        position: relative;
+        background: white;
+        z-index: 1;
     }
 }

@@ -127,15 +127,18 @@
 
 <!-- Main Menu -->
 <ul class="navbar-nav ml-auto justify-content-end">
-    <li class="nav-item ">
+    <!--<li class="nav-item ">
         <a href="http://localhost:4000/about" class="nav-link">About</a>
-    </li>
+    </li>-->
     <li class="nav-item dropdown ">
         <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdownNav01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
         <div class="dropdown-menu" aria-labelledby="dropdownNav01">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+            <a class="dropdown-item" href="#">Corporate</a>
+            <a class="dropdown-item" href="#">Studio</a>
+            <a class="dropdown-item" href="#">Travel</a>
+            <a class="dropdown-item" href="#">Photography</a>
+            <a class="dropdown-item" href="#">Personal</a>
+            <a class="dropdown-item" href="#">Wedding</a>
         </div>
     </li>
     <li class="nav-item dropdown">
@@ -149,9 +152,12 @@
             <a class="dropdown-item" href="#">More Coming Soon!</a>
         </div>
     </li>
-        <li class="nav-item ">
-            <a href="http://localhost:4000/blocks/helpers" class="nav-link">Helpers</a>
-        </li>
+    <li class="nav-item ">
+        <a href="http://localhost:4000/blocks/elements" class="nav-link">Elements</a>
+    </li>
+    <li class="nav-item ">
+        <a href="http://localhost:4000/blocks/helpers" class="nav-link">Helpers</a>
+    </li>
     <li class="nav-item ml-3">
         <a class="nav-button button button-sm button-blue" href="#">Download</a>
     </li>
@@ -171,14 +177,95 @@
     </div>
 </section>
 
-<section class="service style-1">
+<section class="">
     <div class="container">
+        <div class="title style-1 mb-5">
+            <h3 id="buttons">Basic Helpers</h3>
+            <p class="lead">These basic helpers can make your coding life easier. These classes carry priority (<code>!important</code> value) over other elements.</p>
+        </div>
         <div class="row auto-height">
             <div class="col-md-6">
-                adsf
+                <div class="bs-component">
+                    <h5>Displays</h5>
+                    <pre>&lt;div class="<strong class="color-red">display-{value}</strong>"&gt;CrossWay&lt;/div&gt;</pre>
+                    <ul>
+                        <li>display-none</li>
+                        <li>display-block</li>
+                        <li>display-inline</li>
+                        <li>display-inline-block</li>
+                        <li>display-table</li>
+                        <li>display-flex</li>
+                    </ul>
+                </div>
             </div>
             <div class="col-md-6">
-                asdf
+                <div class="bs-component">
+                    <h5>Positions</h5>
+                    <pre>&lt;div class="<strong class="color-red">position-{value}</strong>"&gt;CrossWay&lt;/div&gt;</pre>
+                    <ul>
+                        <li>position-relative</li>
+                        <li>position-absolute</li>
+                        <li>position-static</li>
+                        <li>position-fixed</li>
+                        <li>position-inherit</li>
+                        <li>position-initial</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row auto-height">
+            <div class="col-md-6">
+                <div class="bs-component">
+                    <h5>Extended Paddings</h5>
+                    <pre>&lt;div class="<strong class="color-red">p{direction}-{#}</strong>"&gt;CrossWay&lt;/div&gt;</pre>
+                    <ul>
+                        <li><code>.ptb-{#}</code> - Adds top and bottom padding. Number values 1-3</li>
+                        <li><code>.pt-{#}</code> - Extends bootstraps padding top. Number values 1-10</li>
+                        <li><code>.pb-{#}</code> - Extends bootstraps padding bottom. Number values 1-10</li>
+                        <li><code>.pl-{#}</code> - Extends bootstraps padding left. Number values 1-10</li>
+                        <li><code>.pr-{#}</code> - Extends bootstraps padding right. Number values 1-10</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="bs-component">
+                    <h5>Extended Margins</h5>
+                    <pre>&lt;div class="<strong class="color-red">m{direction}-{#}</strong>"&gt;CrossWay&lt;/div&gt;</pre>
+                    <ul>
+                        <li><code>.mtb-{#}</code> - Adds top and bottom margin. Number values 1-3</li>
+                        <li><code>.mt-{#}</code> - Extends bootstraps margin top. Number values 1-10</li>
+                        <li><code>.mb-{#}</code> - Extends bootstraps margin bottom. Number values 1-10</li>
+                        <li><code>.ml-{#}</code> - Extends bootstraps margin left. Number values 1-10</li>
+                        <li><code>.mr-{#}</code> - Extends bootstraps margin right. Number values 1-10</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row auto-height">
+            <div class="col-md-6">
+                <div class="bs-component">
+                    <h5>Font Options</h5>
+                    <pre>&lt;div class="<strong class="color-red">font-{format}-{value}</strong>"&gt;CrossWay&lt;/div&gt;</pre>
+                    <ul>
+                        <li><code>.font-{#}x</code> - Multiplies default font size by x amount. Number values 2x-5x</li>
+                        <li><code>.font-weight-{value}</code> - Changes font-weight value. Values: light, normal, bold.</li>
+                        <li><code>.font-style-{value}</code> - Changes font-style value. Values: italic, normal, oblique.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="bs-component">
+                    <h5>No- Removal Classes</h5>
+                    <pre>&lt;div class="<strong class="color-red">no-{value}</strong>"&gt;CrossWay&lt;/div&gt;</pre>
+                    <ul>
+                        <li>no-margin</li>
+                        <li>no-margin-{direction}</li>
+                        <li>no-padding</li>
+                        <li>no-padding-{direction}</li>
+                        <li>no-borders</li>
+                        <li>no-style</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -186,33 +273,91 @@
 
 <section class="bg-grey">
     <div class="container">
-        <h4>How to Use</h4>
-        <div class="row">
-            <div class="col-lg-5">
-                <p>All service items share the same html and classes with one major difference, the style class. You have a choice of 4 different styles that you can control with the <code>.style-{#}</code> class. A couple of notes:</p>
-                <ol class="list timeline">
-                    <li>Font-sizes are controlled by <code>.font-{#}x</code> (ex: <code>.font-3x</code> outputs 3x the default font size).</li>
-                    <li>Read More button has a parent class: <code>read-more</code>.</li>
-                    <li>To add more spacing to the left, use bootstraps <code>.pl-{#}</code> class. CrossWay extends this function to <strong>10</strong>.</li>
-                    <li>Add alignment classes to the parent or to individual <code>.item</code> class to align to center, left, or right.</li>
-                </ol>
+        <div class="title style-1 mb-5">
+            <h3 id="buttons">Images and Card Effects</h3>
+            <p class="lead">These helper classes allow you to add shadows to your image and cards with ease.</p>
+        </div>
+        <div class="row auto-height text-center">
+            <div class="col-lg-6">
+                <div class="row auto-height">
+                    <div class="col-md-6 mb-5">
+                        <figure class="image image-rounded">
+                            <img src="/images/dummy/ruben.jpg" alt="" />
+                        </figure>
+                        <code>image image-rounded</code>
+                    </div>
+                    <div class="col-md-6 mb-5">
+                        <figure class="image image-circle">
+                            <img src="/images/dummy/ruben.jpg" alt="" />
+                        </figure>
+                        <code>image image-circle</code>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-6 offset-lg-1">
-<pre>&lt;div class="<strong class="color-red">service style-1</strong>"&gt;
-  &lt;div class="row"&gt;
-    &lt;div class="col-md-4"&gt;
-      &lt;div class="card"&gt;
-        &lt;div class="icon <strong class="color-blue">font-3x</strong>"&gt;
-        &lt;i class="ti-gallery"&gt;&lt;/i&gt;
-      &lt;/div&gt;
-      &lt;div class="content"&gt;
-        &lt;h4&gt;Title&lt;/h4&gt;
-        &lt;p&gt;Description&lt;/p&gt;
-        &lt;p class="read-more"&gt;&lt;a href="#"&gt;Read More&lt;/a&gt;&lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+            <div class="col-lg-5 offset-lg-1 text-left">
+<pre>&lt;figure class="<strong class="color-red">image image-{effect}</strong>"&gt;
+  &lt;img src="..." alt="..." /&gt;
+&lt;/figure&gt;</pre>
+<pre>&lt;div class="<strong class="color-blue">card</strong> <strong class="color-red">card-{effect}</strong>"&gt;
+  {content}
 &lt;/div&gt;</pre>
+            </div>
+            <div class="col-md-4 mb-5">
+                <figure class="image image-rounded image-shadow-narrow">
+                    <img src="/images/dummy/ruben.jpg" alt="" />
+                </figure>
+                <code>image-shadow-narrow</code>
+            </div>
+            <div class="col-md-4 mb-5">
+                <figure class="image image-rounded image-shadow">
+                    <img src="/images/dummy/ruben.jpg" alt="" />
+                </figure>
+                <code>image-shadow</code>
+            </div>
+            <div class="col-md-4 mb-5">
+                <figure class="image image-rounded image-shadow-wide">
+                    <img src="/images/dummy/ruben.jpg" alt="" />
+                </figure>
+                <code>image-shadow-wide</code>
+            </div>
+            <div class="col-lg-4 mb-5 text-left">
+                <div class="card card-rounded card-shadow-lifted">
+                    <img class="card-img-top" alt="Card" style="height: 180px; width: 100%; display: block;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22318%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15bbc5a4746%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15bbc5a4746%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22118.0859375%22%20y%3D%2297.2%22%3E318x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
+                    <div class="card-block">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="button button-sm button-green">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="text-center mt-3">
+                    <code>image-shadow-lifted</code>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-5 text-left">
+                <div class="card card-rounded card-shadow-floating">
+                    <img class="card-img-top" alt="Card" style="height: 180px; width: 100%; display: block;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22318%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15bbc5a4746%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15bbc5a4746%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22118.0859375%22%20y%3D%2297.2%22%3E318x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
+                    <div class="card-block">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="button button-sm button-red">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="text-center mt-3">
+                    <code>image-shadow-floating</code>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-5 text-left">
+                <div class="card card-rounded card-shadow-layer">
+                    <img class="card-img-top" alt="Card" style="height: 180px; width: 100%; display: block;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22318%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15bbc5a4746%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15bbc5a4746%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22118.0859375%22%20y%3D%2297.2%22%3E318x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
+                    <div class="card-block">
+                        <h4 class="card-title">Card title</h4>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="button button-sm button-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="text-center mt-3">
+                    <code>image-shadow-layer</code>
+                </div>
             </div>
         </div>
     </div>
@@ -224,23 +369,6 @@
         <div class="row">
             <div class="col-md-6">
                 <ul class="list vertical mr-auto">
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Support</a>
-                    </li>
-                    <li>
-                        <a href="#">Privacy</a>
-                    </li>
-                    <li>
-                        <a href="#">Legal</a>
-                    </li>
-                </ul>
-                &copy; CrossWay. Crafted by <a href="https://fwpolice.com">FWPolice</a>.
-            </div>
-            <div class="col-md-6 text-right">
-                <ul class="list vertical ml-auto">
                     <li>
                         <a href="#"><i class="fa fa-facebook"></i> &nbsp; Like</a>
                     </li>
@@ -254,7 +382,24 @@
                         <a href="#"><i class="fa fa-dribbble"></i> &nbsp; Shoot</a>
                     </li>
                 </ul>
-                Handcrafted with <i class="fa fa-heart"></i> in New York.
+                &copy; CrossWay. Crafted by <a href="https://fwpolice.com">FWPolice</a>.
+            </div>
+            <div class="col-md-6 text-right">
+                <ul class="list vertical ml-auto">
+                    <li>
+                        <a href="/about">About</a>
+                    </li>
+                    <li>
+                        <a href="/support">Support</a>
+                    </li>
+                    <li>
+                        <a href="/privacy">Privacy</a>
+                    </li>
+                    <li>
+                        <a href="/terms">Legal</a>
+                    </li>
+                </ul>
+                Coded with <i class="fa fa-heart"></i> in New York.
             </div>
         </div>
     </div>
