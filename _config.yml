@@ -4,7 +4,7 @@ title:               CrossWay Framework
 tagline:             Opensource Templating System
 author:              FWPolice
 author_email:        support@fwpolice.com
-url:                 http://crossway.fwpolice.com
+url:                 http://crossway.sazzad.me
 baseurl:             ''
 permalink:           pretty
 exclude:             [README.markdown]
